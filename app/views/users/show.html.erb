@@ -1,0 +1,9 @@
+<h1><%= @user.name %></h1>
+
+
+
+<h2>Images</h2>
+
+<% if @user == current_user %>
+    <%= link_to "Add New Image", "#" %>
+<% end %>

@@ -1,2 +1,10 @@
-<h1>Images#new</h1>
-<p>Find me in app/views/images/new.html.erb</p>
+<h1>Add Image</h1>
+
+<%= form_for(@image) do |f| %>
+    <%= f.text_field(:image_url, {placeholder: "Type Image URL"}) %>
+    <%= f.text_field(:date, {placeholder: "Type Date"}) %>
+    <%= f.text_field(:title, {placeholder: "Type Title"}) %>
+    <%= f.text_field(:description, {placeholder: "Type Description"}) %>
+    <%= f.text_field(:category, {placeholder: "Type Category"}) %>    
+    <%= f.submit("Add") %>
+    <%end%>

@@ -1,2 +1,6 @@
-<h1>Images#index</h1>
-<p>Find me in app/views/images/index.html.erb</p>
+<h1>Home Page</h1>
+
+<% @images.each do |i| %>
+    <li><%= i.user.name %></li>
+    <%= image_tag(i.image_url) %>
+<% end %>

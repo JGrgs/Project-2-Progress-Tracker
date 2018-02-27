@@ -1,2 +1,14 @@
-<h1>Images#show</h1>
-<p>Find me in app/views/images/show.html.erb</p>
+<h1><%= @user.name %></h1>
+
+<h2><%= @image.category %> </h2>
+
+<%= image_tag(@image.image_url) %>
+
+<%= @image.date %>
+
+<%= @image.title %>
+
+<%= @image.description %>
+
+
+<%= link_to("Edit", "/images/#{@image.id}/edit",  class: "btn btn-primary") %>

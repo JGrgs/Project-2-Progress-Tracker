@@ -9,15 +9,10 @@
   </head>
 
   <body>
-    <% if logged_in? %>
-    <%= link_to "Home", images_path %>
-    <%= link_to "Profile", user_path(current_user.id) %>
-    <%= link_to "All Users", users_path %>
-    <%= link_to "Sign Out", logout_path, {method: 'delete'} %>
-    <% else %>
-    <%= link_to "Log In", new_session_path %>
-    <%= link_to "Sign Up", new_user_path %>
-  <% end %>
+    <div id = "header">
+    <h1 align = "Center">Progress Tracker</h1>
+    </div>
+    <%= render '/partials/nav' %>
     <div class = "container">
       <%= yield %>
     </div>

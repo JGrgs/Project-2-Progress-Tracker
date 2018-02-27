@@ -1,5 +1,12 @@
 @import 'bootstrap';
 
 img {
-    max-width: 400px;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#header {
+    background: lightgrey;
+    margin: 0 auto;
+    padding-bottom: 4px;
 }

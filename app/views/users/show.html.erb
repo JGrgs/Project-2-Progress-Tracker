@@ -1,5 +1,7 @@
 <h1><%= @user.name %></h1>
 
+<h3><%= link_to "Edit Profile", edit_user_path(@user.id) %></h3>
+
 <ul>
 <% @user.images.each do |i| %>
     <%= image_tag (i.image_url) %>

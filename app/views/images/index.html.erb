@@ -1,6 +1,11 @@
 <h1>Home Page</h1>
 
 <% @images.each do |i| %>
-    <li><%= i.user.name %></li>
+<% if logged_in? %>
+    <li><%= link_to i.user.name, user_path(i.user_id) %></li>
     <%= image_tag(i.image_url) %>
+    <%else%>
+    <%= image_tag(i.image_url) %>
+    <%end%>
+
 <% end %>

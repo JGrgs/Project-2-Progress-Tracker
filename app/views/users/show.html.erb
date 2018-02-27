@@ -9,10 +9,11 @@
     <li><%= i.category %></li>
     <%if i.user == current_user%>
     <li><%= link_to("Edit", edit_image_path(i.id),  class: "btn btn-primary") %></li>
-<% end%>
+    <li><%= link_to("Delete Image", image_path(i.id), class:"btn btn-danger") %></li>
+    <%end%>
 <% end %>
 </ul>
 
 <% if @user == current_user %>
-    <%= link_to "Add New Image", new_image_path %>
+    <%= link_to "Add New Image", new_image_path, class: "btn btn-secondary" %>
 <% end %>

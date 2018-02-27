@@ -23,7 +23,7 @@ class ImagesController < ApplicationController
   end
 
   def update
-    @image = Image.new
+    @image = Image.find(params[:id])
     @image.image_url = params[:image][:image_url]
     @image.date = params[:image][:date]
     @image.title = params[:image][:title]

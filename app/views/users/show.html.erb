@@ -1,6 +1,7 @@
 <h1><%= @user.name %></h1>
-
+<%if @user == current_user%>
 <h3><%= link_to "Edit Profile", edit_user_path(@user.id), class: "btn btn-secondary" %></h3>
+<%end%>
 
 <ul>
 <% @user.images.each do |i| %>

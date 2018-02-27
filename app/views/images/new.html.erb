@@ -1,10 +1,29 @@
-<h1>Add Image</h1>
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <h1>Add Image</h1>
+          <%= form_for @image do |f| %>
+            <div class="form-group">
+              <label>Image URL</label>
+              <%= f.text_field :image_url, class: "form-control", placeholder: "Enter URL" %>
+            </div>
+            <div class="form-group">
+              <label>Date</label>
+              <%= f.text_field :date, class: "form-control", placeholder: "Enter Date" %>
+            </div>
+            <div class="form-group">
+              <label>Title</label>
+              <%= f.text_field :title, class: "form-control", placeholder: "Enter Title" %>
+            </div>
+            <div class="form-group">
+              <label>Description</label>
+              <%= f.text_field :description, class: "form-control", placeholder: "Enter Description" %>
+            </div>
+            <div class="form-group">
+                <label>Category</label>
+                <%= f.text_field :category, class: "form-control", placeholder: "Enter Category" %>
+              </div>
 
-<%= form_for(@image) do |f| %>
-    <%= f.text_field(:image_url, {placeholder: "Type Image URL"}) %>
-    <%= f.text_field(:date, {placeholder: "Type Date"}) %>
-    <%= f.text_field(:title, {placeholder: "Type Title"}) %>
-    <%= f.text_field(:description, {placeholder: "Type Description"}) %>
-    <%= f.text_field(:category, {placeholder: "Type Category"}) %>    
-    <%= f.submit("Add") %>
-    <%end%>
+            <%= f.submit "Add Image", class: "btn btn-primary" %>
+          <% end %>
+        </div>
+      </div>

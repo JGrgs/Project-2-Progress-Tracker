@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
-root "images#index"
+
+
+root "pages#index"
+resources :pages
  resources :users
  resources :images
  resources :sessions, only: [:new, :create]

@@ -1,0 +1,48 @@
+
+    <!-- <% @images.each_slice(4) do |row|%>
+   <div class="row">
+       <% row.each do |s| %>
+           <div class="col-md-3">
+                   <div class="crop">
+                       <img class="card-img-top" src="<%= s.image_url %>" alt="Card image cap">
+                   </div>
+           </div>
+       <% end %>
+   </div>
+<% end %> -->
+
+
+    
+
+<!-- <% @images.each do |i| %>
+<div class="row">
+        <div class="col"><%= image_tag(i.image_url) %></div>
+        <div class="col"><%= image_tag(i.image_url) %></div>
+        <div class="col"><%= image_tag(i.image_url) %></div>
+        <div class="col"><%= image_tag(i.image_url) %></div>
+        
+        <!-- <div class="w-100"></div>
+        <div class="col"><%= image_tag(i.image_url) %></div>
+        <div class="col"><%= image_tag(i.image_url) %></div>
+        <div class="col"><%= image_tag(i.image_url) %></div>
+        <div class="col"><%= image_tag(i.image_url) %></div>
+        
+        <div class="w-100"></div>
+        <div class="col"><%= image_tag(i.image_url) %></div>
+        <div class="col"><%= image_tag(i.image_url) %></div>
+        <div class="col"><%= image_tag(i.image_url) %></div>
+        <div class="col"><%= image_tag(i.image_url) %></div> -->
+        
+<!-- </div>
+<% end %> -->
+
+<div class="wrapper">
+<% @images.each do |i| %>
+    
+    <div class="card" style="width: 18rem;">
+      <!-- <img class="card-img-top" src="<%# movie.img_url %>" alt="Card image cap"> -->
+      <%= image_tag(i.image_url, class: "card-img-top") %>
+    </div>
+
+  <% end %>
+</div>

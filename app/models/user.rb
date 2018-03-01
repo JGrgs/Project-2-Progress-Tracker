@@ -7,4 +7,9 @@ class User < ApplicationRecord
     validates :email, presence:true
     validates :email, uniqueness: true
     validates :password, length: { in: 6..20 }
+
+    def self.search(search)                                                                                               #Search method to declare which fields the method should search for matching queries.
+        where("name LIKE ? OR username ILIKE ?", "%#{search}%", "%#{search}%")     #Used ILIKE(postgres/heroku friendly) instead of LIKE (sql)
+      end
+
 end

@@ -17,6 +17,13 @@
             <li class="nav-item">
                 <%= link_to "Sign Out", logout_path, {method: 'delete', :class => "nav-link"} %>
             </li>
+            
+            <div class="search-form">
+                    <%= form_tag(users_path, method: "get") do %>
+                        <%= text_field_tag :search, params[:search],size:"20x1", placeholder: "Search" %>
+                        <%= submit_tag "Search", class: "btn btn-warning", name: nil %>
+                    <% end %>
+                </div>
         <%else%>
             <li class="nav-item">
                 <%= link_to "Log In", new_session_path, :class => "nav-link" %>

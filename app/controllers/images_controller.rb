@@ -1,6 +1,6 @@
 class ImagesController < ApplicationController
   def index
-    @images = Image.all
+    @images = Image.all.order("created_at DESC")
   end
 
   def show
@@ -19,7 +19,12 @@ class ImagesController < ApplicationController
   end
 
   def edit
+    
     @image = Image.find(params[:id])
+    @user = User.find @image.user_id
+    if @user != current_user
+      redirect_to images_path
+    end
   end
 
   def update

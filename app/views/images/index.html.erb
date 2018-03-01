@@ -1,35 +1,25 @@
-<!-- <% @images.each do |i| %>
-<% if logged_in? %>
-    <li><%# link_to i.user.username, user_path(i.user_id) %></li>
-    <%# image_tag(i.image_url) %>
-    <%# i.description %>
-    <%else%>
-    redirect_to pages_path
-    <%end%>
-<% end %> -->
 
-<section>
-        <% @images.each do |i| %>
-        <% if logged_in? %>
- <div class="container">
-   <div class="feeds-card">
-     <div class="row">
-       <div class="col-md-6">
-         <div class="card-block">
-           <h4 class="card-title"><%= link_to i.user.username, user_path(i.user_id) %></h4>
-           <p class="card-text"><%= i.description %></p>
-         </div>
-       </div>
-       <div class="col-md-6">
-         <div class="card-img-bottom">
-                <%= image_tag(i.image_url) %>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
- <%else%>
- redirect_to pages_path
- <%end%>
+<% @images.each do |i| %>
+<% if logged_in? %>
+
+  <div class="home-wrapper">
+    <div class="home-image">
+        <%= image_tag(i.image_url) %>
+    </div>
+
+    <div class="home-image-info">
+        <div class="home-image-username">
+        <p><%= link_to i.user.username, user_path(i.user_id)%></p>
+      </div>
+      <div class="home-image-title">
+        <p><%= i.title%></p>
+      </div>
+      <div class="home-image-description">
+        <p><%= i.description %></p>
+      </div>
+    </div>
+  </div>
+<%else%>
+redirect_to pages_path
+<%end%>
 <% end %>
-</section>

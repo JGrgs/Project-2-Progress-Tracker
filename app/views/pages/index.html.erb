@@ -1,45 +1,13 @@
-
-    <!-- <% @images.each_slice(4) do |row|%>
-   <div class="row">
-       <% row.each do |s| %>
-           <div class="col-md-3">
-                   <div class="crop">
-                       <img class="card-img-top" src="<%= s.image_url %>" alt="Card image cap">
-                   </div>
-           </div>
-       <% end %>
-   </div>
-<% end %> -->
-
-
-    
-
-<!-- <% @images.each do |i| %>
-<div class="row">
-        <div class="col"><%= image_tag(i.image_url) %></div>
-        <div class="col"><%= image_tag(i.image_url) %></div>
-        <div class="col"><%= image_tag(i.image_url) %></div>
-        <div class="col"><%= image_tag(i.image_url) %></div>
-        
-        <!-- <div class="w-100"></div>
-        <div class="col"><%= image_tag(i.image_url) %></div>
-        <div class="col"><%= image_tag(i.image_url) %></div>
-        <div class="col"><%= image_tag(i.image_url) %></div>
-        <div class="col"><%= image_tag(i.image_url) %></div>
-        
-        <div class="w-100"></div>
-        <div class="col"><%= image_tag(i.image_url) %></div>
-        <div class="col"><%= image_tag(i.image_url) %></div>
-        <div class="col"><%= image_tag(i.image_url) %></div>
-        <div class="col"><%= image_tag(i.image_url) %></div> -->
-        
-<!-- </div>
-<% end %> -->
+<div class="about">
+  <p>About Us:"You don't make progress by standing on the sidelines, whimpering and complaining. You make progress by implementing ideas."
+    Shirley Chisholm</p>
+    <p>Watch your ideas come to life with Progress Tracker. Our app allows you to visually track your progress through uploading images to you profile under any category you like. Progress Trackers are also able to view each other's images and track each other's processes of progressing.</p>
+</div>
 
 <div class="wrapper">
 <% @images.each do |i| %>
     
-    <div class="card" style="width: 18rem;">
+    <div class="card card-index" style="width: 18rem;">
       <!-- <img class="card-img-top" src="<%# movie.img_url %>" alt="Card image cap"> -->
       <%= image_tag(i.image_url, class: "card-img-top") %>
     </div>

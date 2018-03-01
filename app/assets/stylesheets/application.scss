@@ -7,13 +7,17 @@
 // }
 
 .header {
-    background: lightgrey;
-    height: 50px;
+    background: rgba(0, 0, 0, 0.9);
+    height: 70px;
     position: fixed;
     margin-top: 0;
     margin-bottom: 10px;
     width: 100%;
     z-index: 1;
+    color: lightgrey;
+    -webkit-box-shadow: 0px 2px 12px 6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 12px 6px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 12px 6px rgba(0,0,0,0.75);
 }
 
 .container {
@@ -22,16 +26,28 @@
 
 .n {
     float: left;
-    width: 10%;
+    width: 50%;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 20px;
+}
+
+.nav-item {
+   line-height: 70px;
+}
+
+.nav-link {
+    padding: 0 16px;
 }
 
 ul {
-    width: 90%;
+    width: 50%;
     float: right;
 }
 
 body {
-    background : gray;
+    background : #851d1d;
 }
 
 // .crop {
@@ -58,16 +74,25 @@ body {
    display: inline-block;
    height: auto;
    vertical-align: top;
-   overflow: scroll;
-   max-height: 200px;
    border-radius: 25px;
    border: 5px solid black;
+   width: 18rem;
 }
 
-.wrapper {
- 
-    margin: 0 auto;
+// .card-index {
+//     max-height: 200px;
+
+// }
+
+.card img {
+    width: 100%;
+    border-radius: 20px;
+    
 }
+
+// .wrapper {
+//     margin: 0 auto;
+// }
 
 .card-img-bottom {
     color: #fff;
@@ -95,3 +120,194 @@ body {
         max-width: 200px;
         max-height: 300px;
     }
+
+.home-wrapper {
+    // width: 65%;
+    // height: 300px;
+    margin-left: 15%;
+    margin-bottom: 40px;
+    background-color: rgba(189, 75, 75, 0.8);
+    display: inline-block;
+    padding: 15px;
+    clear: both;
+    border-radius: 10px;
+    -webkit-box-shadow: 47px 14px 118px 9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 47px 14px 118px 9px rgba(0,0,0,0.75);
+    box-shadow: 47px 14px 118px 9px rgba(0,0,0,0.75);
+}
+
+.spacer {
+    width: 100%;
+    height: 100px;
+}
+
+.home-image {
+    float: left;
+}
+
+.home-image img {
+    max-height: 300px;
+}
+
+.home-image-info {
+    float: left;
+    width: 320px;
+    margin-left: 20px;
+    // height: 300px;
+    // padding-top: 100px;
+}
+
+.home-image-username, .home-image-title {
+    height: 75px;
+}
+
+.home-image-username {
+    font-size: 45px;
+}
+
+.home-image-title {
+    font-size: 30px;
+}
+
+.profile-each-image {
+    width: 23%;
+    min-height: 400px; 
+    float: left;
+    display: inline-block;
+    background-color: rgba(23, 23, 24, 0.8);
+    margin-left: 22px;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: 10px;
+    color: lightgray;
+    -webkit-box-shadow: 11px 11px 13px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 11px 11px 13px -2px rgba(0,0,0,0.75);
+    box-shadow: 11px 11px 13px -2px rgba(0,0,0,0.75);
+}
+
+.name-edit-add {
+    float: right;
+}
+
+
+.profile-wrapper {
+    width: 100%;
+    clear: both;
+    height: 100px;
+}
+
+.profile-image {
+    width: 100%;
+
+}
+
+.name-edit-add div {
+    // display: inline-block;
+    float: right;
+    margin-right: 5px;
+    line-height: 50px;
+}
+
+.profile-name {
+    font-size: 50px;
+    float: left;
+    padding-left: 22px;
+}
+
+.edit-profile-btn {
+    margin-top: 7px;
+}
+
+.profile-card img {
+    margin: 0 auto;
+    display: block;
+    max-width: 95%;
+    border-radius: 10px;
+}
+
+.profile-card {
+    margin-bottom: 40px;
+}
+
+.profile-image-wrap {
+    margin: 0 auto;
+    width: 100%;
+    display: block;
+}
+
+.edit-delete div {
+    display: inline-block;
+    
+}
+
+.edit-delete {
+    width: 60%;
+    margin: 0 auto;
+    bottom: 0;
+    position: absolute;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+
+.profile-date {
+    padding-left: 8px;
+}
+
+.current-image-date, .current-image, .current-image-info {
+}
+
+.current-image-wrapper {
+    width: 50%;
+    background-color:rgba(0, 0, 0, 0.8);
+    float: left;
+    color: lightgray;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.current-image-spacer {
+    width: 25%;
+    height: 100px;
+    float:left; 
+}
+
+.current-image img {
+    width: 96%;
+    margin-left: 12px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.current-image-info div {
+    display: block;
+    padding-bottom: 10px;
+    padding-left: 17px;
+}
+
+.current-date-edit {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    height: 45px;
+    clear: both;
+    line-height: 45px;
+}
+.current-image-date {
+    float: left;
+    padding-left: 17px;
+}
+
+.current-image-edit {
+    float: right;
+    padding-right: 17px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: chartreuse;
+    font-style: italic;
+}

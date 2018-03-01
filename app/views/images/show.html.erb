@@ -1,14 +1,33 @@
 <h1><%= @user.name %></h1>
 
-<h2><%= @image.category %> </h2>
+<div class="current-image-spacer">
 
-<%= image_tag(@image.image_url) %>
+</div>
+<div class="current-image-wrapper">
+<div class="current-date-edit">
+<div class="current-image-date">
+    <%= @image.date %>
+</div>
+<div class="current-image-edit">
+    <%= link_to("Edit", edit_image_path(@image.id),  class: "btn btn-secondary") %>
+</div>
+</div>
+<div class="current-image">
+    <%= image_tag(@image.image_url) %>
+</div>
 
-<%= @image.date %>
+<div class="current-image-info">
+    <div class="current-image-title">
+        <li><%= @image.title %></li>
+    </div>
+    <div class="current-image-category">
+        <li><%= @image.category %></li>
+    </div>
+    <div class="current-image-description">
+        <li><%= @image.description %></li>
+    </div>
+</div>
+</div>
 
-<%= @image.title %>
-
-<%= @image.description %>
 
 
-<%= link_to("Edit", "/images/#{@image.id}/edit",  class: "btn btn-secondary") %>

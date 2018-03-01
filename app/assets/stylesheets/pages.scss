@@ -1,3 +1,23 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.card {
+    margin-left: 60px;
+    margin-top: 50px;
+    display: inline-block;
+    height: auto;
+    vertical-align: top;
+    overflow: scroll;
+    border-radius: 25px;
+    border: 5px solid black;
+    width: 18rem;
+ }
+
+ .wrapper {
+    margin: 0 auto;
+}
+
+.card-index {
+    max-height: 200px;
+
+}

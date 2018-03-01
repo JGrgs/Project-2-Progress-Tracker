@@ -1,22 +1,61 @@
-<h1><%= @user.name %></h1>
-<%if @user == current_user%>
-<h3><%= link_to "Edit Profile", edit_user_path(@user.id), class: "btn btn-secondary" %></h3>
-<%end%>
-
-<ul>
+<div class="profile-wrapper">
+    <div class="name-edit-add">
+        <%if @user == current_user%>
+            <div class="edit-profile-btn">
+                <h3><%= link_to "Edit Profile", edit_user_path(@user.id), class: "btn btn-secondary" %></h3>
+            </div>
+        <%end%>
+        <div class="add-img-btn">
+            <% if @user == current_user %>
+                <%= link_to "Add New Image", new_image_path, class: "btn btn-secondary" %>
+            <% end %>
+        </div>
+        <div class="profile-name">
+                <h1><%= @user.name %></h1>
+        </div>
+    </div>
+</div>
+<div class="profile-image">
 <% @user.images.each do |i| %>
-    <%= image_tag (i.image_url) %>
-    <li><%= i.title %></li>
-    <li><%= i.description %></li>
-    <li><%= i.date %></li>
-    <li><%= i.category %></li>
-    <%if i.user == current_user%>
-    <li><%= link_to("Edit", edit_image_path(i.id),  class: "btn btn-primary") %></li>
-    <li><%= link_to("Delete Image", image_path(i.id), {method: 'delete', data: {confirm: "Are you sure?"}, class:"btn btn-danger" }) %></li>
-    <%end%>
+    <div class="profile-each-image">
+        <div class="profile-card" style="width: 18rem;">
+            <div class="profile-date">
+                <%= i.date %>
+            </div>
+            <div class="profile-image-wrap"> 
+            <%= image_tag(i.image_url) %>
+            </div> 
+            <div class="card-body">
+                <h4 class="card-category"><%= i.category %></h4>
+                <h5 class="card-title"><%= i.title %></h5>
+                <p class="card-text"> <%=link_to "Click for more", image_path(i.id)%> </p>
+            </div>
+        </div>
+        <%if i.user == current_user%>
+            <div class="edit-delete">
+                <div class="edit-img-btn">
+                    <%= link_to("Edit", edit_image_path(i.id),  class: "btn btn-primary") %>
+                </div>
+                <div class="delete-img-btn">
+                    <%= link_to("Delete", image_path(i.id), {method: 'delete', data: {confirm: "Are you sure?"}, class:"btn btn-danger" }) %>
+                </div>
+            </div>
+        <%end%>
+    </div>
 <% end %>
-</ul>
+</div>
+<!-- <% @user.images.each do |i| %>
+<div class="show-page card-deck">
+        <div class="card">
+          <img class="card-img-top" src="<%= i.image_url %>" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-category"><%= i.category %></h4>
+            <h5 class="card-title"><%= i.title %></h5>
+            <p class="card-text"> <%= i.date %></p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"> <%= i.date %></small>
+          </div>
+</div>
+<% end %> -->
 
-<% if @user == current_user %>
-    <%= link_to "Add New Image", new_image_path, class: "btn btn-secondary" %>
-<% end %>

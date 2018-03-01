@@ -6,7 +6,7 @@
 <div class="users-list">
 <ul>
     <% @users.each do |u| %>
-        <%=u.images.last%>
+        <%=image_tag(u.images.last)%>
        <li> <%=link_to u.name, user_path(u.id) %></li>
     <% end %>   
    </ul>

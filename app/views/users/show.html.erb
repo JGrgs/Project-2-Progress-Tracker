@@ -1,17 +1,18 @@
 <div class="profile-wrapper">
+        <div class="profile-name">
+                <%= @user.name %>
+        </div>
     <div class="name-edit-add">
+            
         <%if @user == current_user%>
             <div class="edit-profile-btn">
-                <h3><%= link_to "Edit Profile", edit_user_path(@user.id), class: "btn btn-secondary" %></h3>
+                <h3><%= link_to "Edit Profile", edit_user_path(@user.id), class: "btn btn-primary" %></h3>
             </div>
         <%end%>
         <div class="add-img-btn">
             <% if @user == current_user %>
-                <%= link_to "Add New Image", new_image_path, class: "btn btn-secondary" %>
+                <%= link_to "Add New Image", new_image_path, class: "btn btn-success" %>
             <% end %>
-        </div>
-        <div class="profile-name">
-                <h1><%= @user.name %></h1>
         </div>
     </div>
 </div>
@@ -28,7 +29,7 @@
             <div class="card-body">
                 <h4 class="card-category"><%= i.category %></h4>
                 <h5 class="card-title"><%= i.title %></h5>
-                <p class="card-text"> <%=link_to "Click for more", image_path(i.id)%> </p>
+                <p class="card-text"> <%=link_to "Click Here", image_path(i.id)%> to learn about progress </p>
             </div>
         </div>
         <%if i.user == current_user%>

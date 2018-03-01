@@ -8,23 +8,25 @@
 <div class="current-image-date">
     <%= @image.date %>
 </div>
+<%if @user == current_user%>
 <div class="current-image-edit">
     <%= link_to("Edit", edit_image_path(@image.id),  class: "btn btn-secondary") %>
 </div>
+<%end%>
 </div>
 <div class="current-image">
     <%= image_tag(@image.image_url) %>
 </div>
 
 <div class="current-image-info">
-    <div class="current-image-title">
+    <!-- <div class="current-image-title">
         <li><%= @image.title %></li>
     </div>
     <div class="current-image-category">
         <li><%= @image.category %></li>
-    </div>
+    </div> -->
     <div class="current-image-description">
-        <li><%= @image.description %></li>
+        <%= @image.description %>
     </div>
 </div>
 </div>

@@ -1,11 +1,5 @@
 @import 'bootstrap';
 
-// img {
-//     width: 200px;
-//     height: 200px;
-//     display: inline-block;
-// }
-
 .header {
     background: rgba(0, 0, 0, 0.9);
     height: 70px;
@@ -31,34 +25,21 @@
     font-weight: 600;
     line-height: 70px;
     padding-left: 20px;
+    font-style: italic;
 }
 
 .nav-item {
    line-height: 70px;
+   font-size: 20px;
 }
 
 .nav-link {
     padding: 0 16px;
 }
 
-ul {
-    width: 50%;
-    float: right;
-}
-
 body {
     background : #851d1d;
 }
-
-// .crop {
-//     height: 250px;
-//     // overflow: hidden;
-//  }
- 
-//  .crop img {
-//     height: auto;
-//     width: 100%;
-//  }
 
  .col {
     background-color: black;
@@ -79,20 +60,11 @@ body {
    width: 18rem;
 }
 
-// .card-index {
-//     max-height: 200px;
-
-// }
-
 .card img {
     width: 100%;
     border-radius: 20px;
     
 }
-
-// .wrapper {
-//     margin: 0 auto;
-// }
 
 .card-img-bottom {
     color: #fff;
@@ -122,11 +94,9 @@ body {
     }
 
 .home-wrapper {
-    // width: 65%;
-    // height: 300px;
     margin-left: 15%;
     margin-bottom: 40px;
-    background-color: rgba(189, 75, 75, 0.8);
+    background-color:rgba(0, 0, 0, 0.8);
     display: inline-block;
     padding: 15px;
     clear: both;
@@ -134,6 +104,7 @@ body {
     -webkit-box-shadow: 47px 14px 118px 9px rgba(0,0,0,0.75);
     -moz-box-shadow: 47px 14px 118px 9px rgba(0,0,0,0.75);
     box-shadow: 47px 14px 118px 9px rgba(0,0,0,0.75);
+    color: lightgrey;
 }
 
 .spacer {
@@ -153,8 +124,6 @@ body {
     float: left;
     width: 320px;
     margin-left: 20px;
-    // height: 300px;
-    // padding-top: 100px;
 }
 
 .home-image-username, .home-image-title {
@@ -202,7 +171,6 @@ body {
 }
 
 .name-edit-add div {
-    // display: inline-block;
     float: right;
     margin-right: 5px;
     line-height: 50px;
@@ -212,6 +180,8 @@ body {
     font-size: 50px;
     float: left;
     padding-left: 22px;
+    color: beige;
+    font-size: 4.0rem;
 }
 
 .edit-profile-btn {
@@ -253,8 +223,6 @@ body {
     padding-left: 8px;
 }
 
-.current-image-date, .current-image, .current-image-info {
-}
 
 .current-image-wrapper {
     width: 50%;
@@ -303,11 +271,30 @@ body {
 }
 
 a {
-    color: white;
+    color: #d8b535;
     text-decoration: none;
 }
 
 a:hover {
-    color: chartreuse;
+    color: rgb(65, 131, 11);
+    font-style: italic;
+    
+}
+
+.about {
+    color: lightgray;
+    text-align: center;
+    width: 800px;
+    margin: 0 auto;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 2px 0px 48px 24px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 0px 48px 24px rgba(0,0,0,0.75);
+    box-shadow: 2px 0px 48px 24px rgba(0,0,0,0.75);
+}
+
+.quote {
     font-style: italic;
 }

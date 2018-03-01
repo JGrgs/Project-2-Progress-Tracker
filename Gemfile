@@ -55,3 +55,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
+
+gem 'paperclip'
+gem 'aws-sdk', '~> 2.3'
+gem 'dotenv-rails', :group => :development

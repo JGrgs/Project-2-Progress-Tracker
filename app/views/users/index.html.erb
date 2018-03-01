@@ -1,3 +1,8 @@
+<% if @users.blank? %>
+    <h4><%= params[:search] %> does not match any user.</h4>    
+<% end %>
+
+
 <div class="users-list">
 <ul>
     <% @users.each do |u| %>

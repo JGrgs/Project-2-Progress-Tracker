@@ -24,7 +24,7 @@
                 <%= i.date %>
             </div>
             <div class="profile-image-wrap"> 
-            <%= image_tag(i.image_url) %>
+            <%= image_tag(i.file.url) %>
             </div> 
             <div class="card-body">
                 <h4 class="card-category"><%= i.category %></h4>
@@ -45,18 +45,5 @@
     </div>
 <% end %>
 </div>
-<!-- <% @user.images.each do |i| %>
-<div class="show-page card-deck">
-        <div class="card">
-          <img class="card-img-top" src="<%= i.image_url %>" alt="Card image cap">
-          <div class="card-block">
-            <h4 class="card-category"><%= i.category %></h4>
-            <h5 class="card-title"><%= i.title %></h5>
-            <p class="card-text"> <%= i.date %></p>
-          </div>
-          <div class="card-footer">
-            <small class="text-muted"> <%= i.date %></small>
-          </div>
-</div>
-<% end %> -->
+
 

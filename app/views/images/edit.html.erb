@@ -4,7 +4,7 @@
       <%= form_for @image do |f| %>
         <div class="form-group">
           <label>Image URL</label>
-          <%= f.text_field :image_url, class: "form-control", placeholder: "Enter URL" %>
+          <%= f.file_field :file, class: "form-control", placeholder: "Enter URL" %>
         </div>
         <div class="form-group">
           <label>Date</label>

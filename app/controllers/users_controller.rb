@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   def index
     @users = User.all
     if params[:search]
-      @users = User.search(params[:search]).order("created_at DESC")          # Displays matching users in descending order from the time they were created.
+      @users = User.search(params[:search]).order("created_at DESC")
     else
       @users = User.all.order("created_at DESC")
     end
@@ -41,13 +41,12 @@ class UsersController < ApplicationController
     @user.password_confirmation = params[:user][:password_confirmation]
     @user.save
     redirect_to user_path
-
   end
 
   def destroy
     @user = User.find params[:id]
     @user.destroy
-
+    redirect_to root_path
   end
 
   private

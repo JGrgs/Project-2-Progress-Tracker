@@ -6,12 +6,12 @@
             
         <%if @user == current_user%>
             <div class="edit-profile-btn">
-                <h3><%= link_to "Edit Profile", edit_user_path(@user.id), class: "btn btn-warning" %></h3>
+                <h3><%= link_to "Edit Profile", edit_user_path(@user.id), class: "btn btn-secondary" %></h3>
             </div>
         <%end%>
         <div class="add-img-btn">
             <% if @user == current_user %>
-                <%= link_to "Add New Image", new_image_path, class: "btn btn-warning" %>
+                <%= link_to "Add New Image", new_image_path, class: "btn btn-secondary" %>
             <% end %>
         </div>
     </div>
@@ -35,7 +35,7 @@
         <%if i.user == current_user%>
             <div class="edit-delete">
                 <div class="edit-img-btn">
-                    <%= link_to("Edit", edit_image_path(i.id),  class: "btn btn-warning") %>
+                    <%= link_to("Edit", edit_image_path(i.id),  class: "btn btn-secondary") %>
                 </div>
                 <div class="delete-img-btn">
                     <%= link_to("Delete", image_path(i.id), {method: 'delete', data: {confirm: "Are you sure?"}, class:"btn btn-danger" }) %>
